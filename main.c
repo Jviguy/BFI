@@ -1,19 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
-#include <time.h>
 #include <sys/stat.h>
 #include <stdbool.h>
-
-float getTime()
-{
-
-   struct timespec tsp;
-
-   clock_gettime(CLOCK_REALTIME, &tsp);   //Call clock_gettime to fill tsp
-
-   return tsp.tv_nsec;
-}
 
 typedef struct Interpreters {
 	char* tape;
